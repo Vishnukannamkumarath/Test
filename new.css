@@ -1,0 +1,39 @@
+.gift-button {
+  background: linear-gradient(145deg, #f9e79f, #d4ac0d); /* warm gift color */
+  border: 2px solid #b8860b;
+  border-radius: 12px;
+  padding: 15px 30px;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #6b4a00;
+  box-shadow:
+    0 6px 8px rgba(0, 0, 0, 0.2),
+    inset 0 4px 8px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.gift-button:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.3),
+    inset 0 6px 12px rgba(255, 255, 255, 0.8);
+}
+
+.gift-button:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 3px 5px rgba(0, 0, 0, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.gift-button .gift-text {
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
