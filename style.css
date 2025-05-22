@@ -185,7 +185,6 @@
 /* Style the image to be circular */
 .img-wrapper, .img {
   width: 300vw;
-  height:300vw;
   max-width: 250px;
   aspect-ratio: 1/1;
   object-fit: cover;
