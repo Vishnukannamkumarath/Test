@@ -11,6 +11,25 @@
         <img src="img.webp" alt="greeting" width="300px" class="img">
     </div>
     <h1 class="msg">Happy BirthDay Harimame</h1>
+    <audio id="bgmusic" src="song.mp3" autoplay></audio>
+    <button id="musicbtn" onclick="control()">Click Here!</button>
+    <script>
+        const music=document.getElementById('bgmusic');
+        const btn=document.getElementById('musicbtn');
+        function control(){
+            if(music.paused){
+                music.play().then(()=>{
+                    btn.textContent='STOP'
+                }).catch((error)=>{
+                    console.log('autoplay is blocked',error);
+                });
+            }else{
+                music.pause();
+                btn.textContent='START'
+            }
+        }
+    </script>
+
     <div class="balloon-container">
     <div class="balloon">🎈</div>
     <div class="balloon">🎈</div>
