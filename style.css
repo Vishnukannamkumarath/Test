@@ -12,7 +12,8 @@
   justify-content: center;
   width: 90px;
   height: 90px;
-
+  margin-top: 50%;
+  margin-left: 50%;
   /* 3D shadow layers */
   box-shadow:
     6px 6px 10px rgba(0, 0, 0, 0.3),   /* main shadow (bottom-right) */
