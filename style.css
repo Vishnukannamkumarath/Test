@@ -66,51 +66,39 @@
 
 
 
+/* balloon color defferent testing */
 
 .balloon-container {
   position: fixed;
-  bottom: -100px;  /* start just below viewport */
-  left: 0;         /* align container to left */
-  width: 100vw;  
-  height:100%;  /* full width so balloons can spread horizontally */
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   pointer-events: none;
   z-index: 9999;
 }
 
-/* Balloon style and animation */
 .balloon {
-  position: absolute; /* position relative to container */
-  bottom: 0;
-  font-size: 3rem;
-  animation: floatUp 8s linear infinite;
-  user-select: none;
-  will-change: transform;
+  position: absolute;
+  width: 80px; /* Adjust size as needed */
+  max-width: 80px;
+  bottom:-100px;
+  opacity:1;
+  animation: floatUp 14s linear infinite;
 }
 
-/* Animation to float balloon from bottom to top */
+/* Floating animation */
 @keyframes floatUp {
   0% {
     transform: translateY(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(-110vh); /* move balloon above viewport */
-    opacity: 0;
+    transform: translateY(-120vh);
+    opacity: 0.9;
   }
 }
-
-/* Assign different horizontal positions to balloons */
-.balloon:nth-child(1) { left: 0vw; color:blue; animation-delay: 0s;}
-.balloon:nth-child(2) { left: 10vw; color:yellow;animation-delay: 1s; }
-.balloon:nth-child(3) { left: 20vw; color: #2ecc71;animation-delay: 2s; }
-.balloon:nth-child(4) {color: #9b59b6; left: 30vw; animation-delay: 3s;}
-.balloon:nth-child(5) { left: 40vw; color: #3498db; animation-delay: 4s;}
-.balloon:nth-child(6) { left: 50vw; color: #e67e22;animation-delay: 5s;}
-.balloon:nth-child(7) { left: 60vw; color: #1abc9c;animation-delay: 4s;}
-.balloon:nth-child(8) { left: 70vw; color: #1abc9c;animation-delay: 3s;}
-.balloon:nth-child(9) { left: 80vw; color: #1abc9c;animation-delay: 2s;}
-.balloon:nth-child(10) { left: 90vw; color: #1abc9c;animation-delay: 1s;}
-.balloon:nth-child(11) { right: 0vw; color: #1abc9c;animation-delay: 0s;}
 
 
 
